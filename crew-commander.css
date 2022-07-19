@@ -1,0 +1,120 @@
+:root{
+    --primary-color: rgb(11,13,23);
+    --primary-color-variant: rgb(288,214,249);
+    --color-white: rgb(255,255,255);
+}
+
+
+body{
+    background: url(./assets/crew/background-crew-desktop.jpg);
+    background-size: cover;
+}
+.crew__container{
+    display: flex;
+    height: 90vh;
+    margin-left: 4rem;
+    bottom: 3rem;
+    margin-right: 4rem;
+    
+}
+.crewleft__part{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+
+}
+
+.crewleft__top{
+    display: flex;
+    align-items: center;
+    color: var(--color-white);
+    text-transform: uppercase;
+    margin-top: 5rem;
+
+}
+.crewleft__top span{
+
+    color: var(--primary-color-variant);
+    font-size: 20px;
+    padding-right: 10px;
+}
+.crew__content h2{
+    color: #fff;
+}
+.crew__content h1{
+    color: #fff;
+    font-size: 32px;
+    margin: 2rem 0;
+
+}
+.crew__content p{
+    color: #fff;
+}
+.crew__links{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+
+
+}
+.crew__links a{
+    border: 2px solid var(--color-white);
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    
+
+}
+.crew__links a.active{
+    background:var(--color-white);
+
+}
+
+
+.crewright__part{
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+
+}
+.crewright__part img {
+    width: 100%;
+    height: 100%;
+
+}
+
+
+/*.....................media queries tablet....................*/
+@media screen and (max-width:1024px) {
+    body{
+        background: url(./assets/crew/background-crew-tablet.jpg)
+    }
+    .crew__container{
+        flex-direction: column;
+        height: fit-content;
+    }
+    .crew__content{
+        align-items: center;
+        text-align: center;
+    }
+    .crew__content h2{
+        margin-top: 2em;
+
+    }
+    .crew__links{
+        justify-content: center;
+        margin: 20px 0;
+    }
+}
+
+/*.....................media queries phone....................*/
+
+@media screen and (max-width:600px) {
+    body{
+        background: url(./assets/crew/background-crew-mobile.jpg);
+    }
+}

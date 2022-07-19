@@ -1,0 +1,157 @@
+:root{
+    --primary-color: rgb(11,13,23);
+    --primary-color-variant: rgb(288,214,249);
+    --color-white: rgb(255,255,255);
+}
+body{
+    background: url(./assets/technology/background-technology-desktop.jpg);
+    background-size: cover;
+}
+.technology__heading{
+    display: flex;
+    align-items: center;
+    color: var(--color-white);
+    text-transform: uppercase;
+    margin-top: 5rem;
+    margin-left: 7rem; 
+
+}
+.technology__heading span{
+
+    color: var(--primary-color-variant);
+    font-size: 20px;
+    padding-right: 10px;
+}
+.technology__heading h2{
+    color: #fff;
+}
+.technology__container{
+    display: flex;
+    gap: 2em;
+}
+.technology__left{
+    display: flex;
+    gap: 2em;
+    flex: 1;
+}
+.technologyleft__links{
+    display: flex;
+    flex-direction: column;
+    /* position: relative; */
+    /* transform: translateY(30%); */
+    gap: 1em;
+  /*   top: 30%; */
+    margin-top: 8rem;
+
+}
+.technologyleft__links a{
+    color:var(--color-white);
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-left: 4rem; */
+
+}
+.technologyleft__links a.active{
+    background: var(--color-white);
+    color: var(--primary-color)
+
+}
+.technology__right img:nth-child(1){
+    display: block;
+    width: 100%;
+
+}
+.technology__right img:nth-child(2){
+    display: none;
+
+}
+.technology__right{
+    flex: 1;
+    height: 70%;
+    overflow: hidden;
+    margin-right: 5rem;
+    padding-bottom: 7rem;
+}
+.technology__leftcontent{
+    margin-top: 6em;
+
+}
+.technology__leftcontent p,h4{
+    color: var(--color-white);
+
+}
+.technology__leftcontent h1{
+    font-size: 50px;
+    color: var(--color-white);
+    padding: 2rem 0;
+}
+
+
+
+
+
+
+/*.....................media queries tablet....................*/
+
+
+@media screen and (max-width:1024px) {
+    body{
+        background: url(./assets/technology/background-technology-tablet.jpg);
+        background-size: cover;
+      /*  background-color: blue;
+        background-blend-mode: multiply; */
+    }
+    .technology__container{
+        flex-direction: column-reverse;
+        
+    }
+    .technology__left{
+        flex-direction: column;
+    }
+    .technologyleft__links{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .technology__leftcontent{
+        text-align: center;
+
+    }
+    .technology__right{
+        position: relative;
+        margin-left: -2rem;
+        margin-top: 4rem;
+        width: 105vw;
+        height: 100%;
+        
+    }
+    
+    
+    .technology__right img:nth-child(1){
+        display: none;
+    
+    }
+    .technology__right img:nth-child(2){
+        display: block;
+        width: 100%;
+        
+    
+    }
+}
+
+      /*.....................media queries phone....................*/
+
+@media screen and (max-width:600px) {
+    body{
+        background: url(./assets/technology/background-technology-mobile.jpg);
+        background-size: cover;
+        /*  background-color: red;
+        background-blend-mode: multiply; */
+    }
+    
+}

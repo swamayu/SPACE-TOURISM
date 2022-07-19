@@ -1,0 +1,196 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');*/
+:root{
+    --primary-color: rgb(11,13,23);
+    --primary-color-variant: rgb(288,214,249);
+    --color-white: rgb(255,255,255);
+}
+
+/* ...............................Body............................... */
+
+body{
+    background: url(./assets/home/background-home-desktop.jpg);
+    background-size: cover;
+}
+*{
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    transition: all 500ms ease-in-out;
+    font-family: 'Bellefair', serif;
+
+}
+
+/* ..............................Nav.................................... */
+nav{
+    
+    margin-top: 2rem;
+    margin-left: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+nav span{
+    z-index: 1;
+    position: absolute;
+    left: 15%;
+    width:33rem;
+    height: .2rem;
+    top: 3.5rem;
+    background: gray;
+}
+i.fa-bars{
+    display: none;
+}
+i.fa-times{
+    display: none;
+    z-index: 20;
+}
+
+.container{
+    width: 75%;
+    margin: 0 auto;
+}
+.right_part{
+    width: 50%;
+    backdrop-filter: blur(12px);
+    margin-left: 50%;
+
+}
+.right_part ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 2rem;
+    
+}
+.right_part ul li a{
+    position: relative;
+    color: white;
+    padding-bottom: 1rem;
+}
+
+a.active{
+    border-bottom: 2px solid #fff;
+}
+/*.right_part ul li:nth-child(1) a::before{
+    content:'';
+    position: absolute;
+    width: 90%;
+    background-color: #fff;
+    height: .1rem;
+    bottom: -1rem;
+
+}*/
+/*...................................Home-{section}................*/
+.homecontainer__wrapper{
+    display: flex;
+    height: 85vh;
+    gap: 10.5rem;
+    align-items: center;
+}
+.homeleft__part{
+    flex: 1;
+}
+.homeleft__part h5{
+    font-size: 28px;
+    color:var(--color-white);
+}
+.homeleft__part h1{
+    text-transform: uppercase;
+    font-size: 150px;
+    color:var(--color-white);
+}
+.homeleft__part p{
+    color:var(--color-white);
+}
+.homeright__part
+{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.homecontainer__wrapper .homeright__part button{
+    width: 11rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.homecontainer__wrapper .homeright__part button:hover{
+    outline: 4rem solid rgba(255,255,255,0.3);
+}
+/*
+.name.active{
+    position: absolute;
+    display: none;
+    left: 60%;
+    
+
+}
+*/
+
+
+
+/*..................media  for tablets...........*/
+@media screen and (max-width:1024px) {
+    body{
+        background: url(./assets/home/background-home-tablet.jpg);
+        background-size: cover;
+    }
+    nav span {
+        width: 0;
+        top: 3.5rem;
+        background: gray;
+    }
+    .homecontainer__wrapper {
+        height: fit-content;
+       text-align: center;
+       flex-direction: column;
+       gap: 4rem;
+    }
+    
+}
+/*................media queries  for mobiles...........*/
+@media screen and (max-width:600px) {
+    body{
+        background: url(./assets/home/background-home-mobile.jpg);
+        background-size: cover;
+    }
+    .right_part{
+        position: absolute;
+        display: none;
+        top: -2rem;
+        right: 1rem;
+        height: 100%;
+        z-index: 10;
+    }
+    .right_part ul {
+        height: 30%;
+        margin-top: 8rem;
+        flex-direction: column;
+
+    }
+    
+    
+        i.fa-bars{
+            display:block;
+            margin-right: 2rem;
+            font-size: 2rem;
+            color: var(--color-white);
+            cursor: pointer;
+        
+        }
+        i.fa-times{
+            z-index: 2;
+            margin-right: 4rem;
+            font-size: 2rem;
+            color: var(--color-white);
+            z-index: 12;
+            cursor: pointer;
+        
+    }
+    }
